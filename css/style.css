@@ -1,0 +1,91 @@
+/*reset básico para iniciar jogo*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Acessar div do HTML*/
+.game-board {
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid rgb(35, 160, 35);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;/* quando sair das delimitações do quadro, não vai aparecer*/
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+/*acessar classe pipe de img do HTML*/
+.pipe {
+    position: absolute; /*posição absoluta para que nenhuma imagem interfira na outra já que são independentes*/
+    bottom: 0;
+    width: 80px;
+    right: -80px;
+    animation: pipe-animation 2s infinite linear; 
+    /*nome da animação, tempo e "looping"*/
+}
+
+.mario {
+    position: absolute;
+    width: 150px;
+    bottom: 0;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.gameOver {
+    background-image: url(/images/mario-game-over.jpg);
+}
+
+.clouds { 
+    position: absolute;
+    width: 450px;
+    animation: clouds-animation 20s infinite linear; /* linear é para que se movimente namesma velocidade do começo ao fim, sem transiçao*/
+}
+
+
+
+/*Animação: nome, de onde começa e para onde vai -> animou propriedade right*/
+/*Cada keyframe descreve como o elemento animado deve se renderizar a um tempo dado durante a sequência de animação.*/
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    } to {
+        right: 100%;
+    }
+}
+
+/*animar o buttom do mario, definido pela porcentagem da animação, isto é 0% = inicio, 50% = meio, 100% = fim*/
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation{
+    from {
+        right: -450px;
+    }
+    to {
+        right: 100%;
+    }
+}
