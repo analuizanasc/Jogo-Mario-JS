@@ -23,7 +23,12 @@ const jump = () => {
     }, 500); //espera um tempo e depois executa uma funçao - tempo 500 definido na animaçao do jump no css
 }
 
-document.addEventListener('keydown', jump); /* Quando qualquer tecla for pressionada, será chamada a função jump*/
+//Quando qualquer tecla for pressionada, será chamada a função jump:
+document.addEventListener('keydown', jump); 
+
+//chamar funcao jump ao clicar na tela:
+body = document.querySelector("body")
+body.addEventListener("click", jump)
 
 /*Para acabar o jogo, deve-se definir em um periodo de tempo  o que deve acontecer - setIternal(funcao, tempo) 
  */
@@ -47,11 +52,12 @@ const loop = setInterval(() => {
 
         //aparecer tela de game over:
         document.querySelector(".tela-game-over").style.display = "block"
+
         // tempo na tela de game over: 
         document.querySelector(".recorde-segundos").innerHTML = seg
         document.querySelector(".recorde-minutos").innerHTML =  min 
 
-        // parar animaçao do pipe:g
+        // parar animaçao do pipe:
         pipe.style.animation = 'none' //volta para a imagem inicial)
         pipe.style.left = `${pipePosition}px`; //está definindo o estilo da classe pipe - left = a posicao que foi pega na animacao
 
@@ -127,5 +133,7 @@ function timer() {
     clearInterval(relogio)
 
 }
+
+
 
 

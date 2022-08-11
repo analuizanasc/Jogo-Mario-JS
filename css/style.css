@@ -9,11 +9,23 @@
 .game-board {
     width: 100%;
     height: 500px;
-    border-bottom: 15px solid rgb(35, 160, 35);
+    border-bottom: 10px solid #85AD00;
     margin: 0 auto;
     position: relative;
     overflow: hidden;/* quando sair das delimitações do quadro, não vai aparecer*/
     background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+/*imagem piso*/
+.piso{
+    background-image: url('../images/piso2.png');
+    width: 100%;
+    min-height: 100%;
+    background-repeat: repeat;
+    margin: 0 auto;
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
 }
 
 /*tela que aparece quando o jogador perde o jogo*/
@@ -22,7 +34,7 @@
     border: 2px solid rgb(0, 0, 0);
     position: absolute;
     display: none;  
-    width: 25%;
+    width: 30%;
     height: 220px;
     margin: auto;
     top: 20px;
@@ -31,6 +43,7 @@
     right: 0;
     border-radius: 5px;
     padding: 20px 50px;
+    align-self: center;
 }
 
 /*Tempo na tela game over*/
