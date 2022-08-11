@@ -61,12 +61,15 @@ Há duas formas de acesar o material desse repositório, por meio do download e 
 # O jogo: 
 
  
- O objetivo do jogo é fazer com que o Mario pule os canos que vão aparecendo. 
- Você pode fazer isso pressionando qualquer tecla do teclado ou clicando no mouse. Se o Mario não conseguir saltar a tempo, ele morre e o jogo se encerra. 
- Na tela de game over aparece o tempo que o jogador conseguiu ficar sem que Mario fosse atingido, asism poderá se testar e ver qual tempo máximo que consegue atingir!
-Além do tempo, existe um botão para recomeçar o jogo que pode ser acionado pelo click ou pressionando Enter no teclado. 
+O objetivo do jogo é fazer com que o Mario pule os canos que vão aparecendo. Você pode fazer isso pressionando qualquer tecla do teclado ou clicando no mouse. Se o Mario não conseguir saltar a tempo, ele morre e o jogo se encerra. 
+ 
+Na tela de game over aparece o tempo que o jogador conseguiu ficar sem que Mario fosse atingido, asism poderá se testar e ver qual tempo máximo que consegue atingir! Além do tempo, existe um botão para recomeçar o jogo que pode ser acionado pelo click ou pressionando Enter no teclado. 
 
 O jogo possui trilha sonora e efeitos sonoros para os pulos e também quando o Mario perde para deixar o jogo mais divertido.
+
+
+⚠ IMPORTANTE! Deve-se jogar no navegador em tela cheia!!!
+
 
 ## Imagens:
 
