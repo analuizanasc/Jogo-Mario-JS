@@ -1,24 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="images/mario.gif" type="image/x-icon">
     <script src="./js/script.js" defer></script>
-
-    <title>Jogo Mario Jump</title>
-
     
+    <title>Jogo Mario Jump</title>
+ 
 </head>
 
 <body>
-    <div class="game-board">
+    <div class="game-board"> 
+
         <img src="./images/clouds.png" class="clouds">
         <img src="./images/mario.gif" class="mario">
         <img src="./images/pipe.png" class="pipe">
-        <img src="" class="gameover">
+
+        <div class="timer"><!--Timer-->
+            <span class="minuto">00</span>:<!--Minutos-->
+            <span class="segundo">00</span><!--Segundos--> 
+        </div>
+
     </div>
-    
+
+    <div align ="center" class="tela-game-over"><!--Tela de game over-->
+
+        <h1>GAME OVER</h1>
+        <div class="recorde"> 
+            <p>Seu tempo foi: </p>
+            <span class="recorde-minutos">00</span>: 
+            <span class="recorde-segundos">00</span> 
+        </div>
+
+        <div align ="center" class="button">
+            <button>Recomeçar</button>
+        </div>
+    </div>
 </body>
+
 </html>

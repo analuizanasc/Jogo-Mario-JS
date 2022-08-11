@@ -16,14 +16,57 @@
     background: linear-gradient(#87CEEB, #E0F6FF);
 }
 
+/*tela que aparece quando o jogador perde o jogo*/
+.tela-game-over {
+    background: #fff;
+    border: 2px solid rgb(0, 0, 0);
+    position: absolute;
+    display: none;  
+    width: 25%;
+    height: 220px;
+    margin: auto;
+    top: 20px;
+    bottom: 300px;
+    left: 0;
+    right: 0;
+    border-radius: 5px;
+    padding: 20px 50px;
+}
+
+/*Tempo na tela game over*/
+.recorde {
+    font-size: 20px;
+    align-items: flex-end;
+    padding-top: 20px;;
+}
+
+/*alinhar botao na tela de game over*/
+.button{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-top: 30px;
+}
+
+/*botao da tela de game over*/
+button{
+    background: rgb(35, 160, 35);
+    color: #fff;
+    padding: 5px 10px;
+    border: 1.5px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
 /*acessar classe pipe de img do HTML*/
 .pipe {
     position: absolute; /*posição absoluta para que nenhuma imagem interfira na outra já que são independentes*/
     bottom: 0;
     width: 80px;
     right: -80px;
-    animation: pipe-animation 2s infinite linear; 
-    /*nome da animação, tempo e "looping"*/
+    animation: pipe-animation 2s infinite linear; /*nome da animação, tempo e "looping"*/
 }
 
 .mario {
@@ -36,19 +79,22 @@
     animation: jump 500ms ease-out;
 }
 
-.gameOver {
-    background-image: url(/images/mario-game-over.jpg);
-}
-
 .clouds { 
     position: absolute;
     width: 450px;
     animation: clouds-animation 20s infinite linear; /* linear é para que se movimente namesma velocidade do começo ao fim, sem transiçao*/
 }
 
+.timer{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    text-align: center;
+    padding: 220px ;
+}
 
 
 /*Animação: nome, de onde começa e para onde vai -> animou propriedade right*/
+
 /*Cada keyframe descreve como o elemento animado deve se renderizar a um tempo dado durante a sequência de animação.*/
 @keyframes pipe-animation {
     from {
@@ -81,6 +127,7 @@
     }
 }
 
+/*Animar nuvens*/
 @keyframes clouds-animation{
     from {
         right: -450px;
